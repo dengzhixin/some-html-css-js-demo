@@ -1,0 +1,170 @@
+    :root {
+      --primary-color: #71b3dd;
+      --prmary-dark-color: #4489b5;
+      --text-color-gray: #8b979f;
+      --text-color-light-gray: #c1c7cb;
+      --text-color-dark-gray: #5a6f7c
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'PingFang SC', 'Microsoft Yahei', sans-serif;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .profile {
+      width: 650px;
+      height: 350px;
+      box-shadow: 0 0 22px 3px rgba(0, 0, 0, 0.18);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 12px;
+      overflow: hidden;
+    }
+
+    .content {
+      grid-column: 1/8;
+      padding: 30px;
+      position: relative;
+    }
+
+    nav {
+      display: grid;
+      margin-bottom: 24px;
+      display: flex;
+      position: relative;
+    }
+
+    nav a {
+      color: var(--text-color-gray);
+      text-decoration: none;
+    }
+
+
+    nav a.active {
+      color: var(--primary-color);
+    }
+
+    nav a:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    nav .indicator {
+      width: 75px;
+      height: 2px;
+      background-color: var(--prmary-dark-color);
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      transition: 0.4s;
+    }
+
+    .content section {
+      padding: 0 10px 0 30px;
+      position: absolute;
+      left: 0;
+      top: 80px;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    .content section.activeSection {
+      opacity: 1;
+    }
+
+    .personal-info {
+      width: 100%;
+      display: grid;
+      grid-column: repeat(2, 1f);
+    }
+
+    .title {
+      grid-column: 1/2;
+    }
+
+    .title h1 {
+      font-size: 2em;
+      font-weight: bold;
+
+    }
+
+    .title p {
+      color: var(--text-color-gray);
+      margin: 6px 0 18px 0;
+
+    }
+
+    .follow-btn {
+      cursor: pointer;
+      grid-column: 2/3;
+      justify-self: end;
+      height: 30px;
+      padding: 0 27px;
+      line-height: 30px;
+      color: white;
+      border-radius: 4px;
+      background-color: var(--primary-color);
+    }
+
+    .about-me {
+      color: var(--text-color-dark-gray);
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+    }
+
+    footer ul a {
+      color: var(--primary-color);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    footer ul a:hover {
+      color: var(--primary-dark-color);
+
+    }
+
+    footer ul li:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    .project-info {}
+
+    .project-info ul {
+      list-style: none;
+    }
+
+    .project-info ul a {
+      text-decoration: none;
+      color: var(--text-color-dark-gray);
+      line-height: 40px;
+    }
+
+    .right {
+      grid-column: 8/13;
+      max-width: 300px;
+      height: 100%;
+      object-fit: cover;
+    }
