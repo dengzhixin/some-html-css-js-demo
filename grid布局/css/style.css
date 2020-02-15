@@ -65,7 +65,6 @@
     }
 
     nav .indicator {
-      width: 75px;
       height: 2px;
       background-color: var(--prmary-dark-color);
       position: absolute;

@@ -1,7 +1,5 @@
   const navMenuItems = document.querySelectorAll(".nav-menu")
   const sectionItems = document.querySelectorAll("section")
-  console.log(sectionItems)
-
   const indicator = document.querySelector(".indicator")
   handleMenuItemClick(navMenuItems[0])
 
