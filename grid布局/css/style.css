@@ -80,10 +80,13 @@
       left: 0;
       top: 80px;
       opacity: 0;
+      display: none;
       transition: 0.3s ease-in-out;
     }
 
     .content section.activeSection {
+      display: block;
+
       opacity: 1;
     }
 
