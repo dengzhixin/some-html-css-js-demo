@@ -164,9 +164,14 @@
       line-height: 40px;
     }
 
+    .project-info ul a:hover {
+      color: var(--primary-color);
+
+    }
+
     .right {
       grid-column: 8/13;
-      max-width: 300px;
+      max-width: 280px;
       height: 100%;
       object-fit: cover;
     }
