@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas width="500" height="500" id="canvas"></canvas>
+  <!-- 口罩svg图片 -->
+  <img id="mask" src="./image/mask.svg" />
+  <button onclick="wearMask()">戴口罩</button>
+  <button onclick="reset()">重置</button>
+  <div class="loading"><img src="./image/mask.svg" />识别中...</div>
+  <!-- 人脸识别库 -->
+  <script src="./js/face-api.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
