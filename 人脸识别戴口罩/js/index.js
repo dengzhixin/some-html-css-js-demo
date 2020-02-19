@@ -48,7 +48,7 @@ function reset() {
     canvas.height = faceImg.height
     ctx.drawImage(faceImg, 0, 0)
   }
-  faceImg.src = "https://dengzhixin-halo.oss-cn-shenzhen.aliyuncs.com/halo/face_1582134025604.jpg"
+  faceImg.src = "./image/face.jpg"
 }
 window.onload = () => {
   reset()
