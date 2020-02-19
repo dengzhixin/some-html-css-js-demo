@@ -48,7 +48,7 @@ function reset() {
     canvas.height = faceImg.height
     ctx.drawImage(faceImg, 0, 0)
   }
-  faceImg.src = "/人脸识别戴口罩/image/face.jpg"
+  faceImg.src = "https://dengzhixin-halo.oss-cn-shenzhen.aliyuncs.com/halo/face_1582134025604.jpg"
 }
 window.onload = () => {
   reset()
