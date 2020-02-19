@@ -14,7 +14,6 @@ async function wearMask() {
   // // 开始人脸识别，先识别脸，只返回一个最接近的人脸数据
   // // 再识别眼、嘴、鼻的位置，使用68个点坐标模型
   // // 最后获取脸部描述
-  const minConfidence = 0.8
   const detection = await faceapi.detectSingleFace(canvas).withFaceLandmarks();;
   console.log(detection)
 
@@ -22,9 +21,10 @@ async function wearMask() {
     landmarks
   } = detection;
   const {
-    imageWidth,
+    imageWidth: faceWidth,
     positions
   } = landmarks;
+  console.log(landmarks)
   // 左耳附近
   const {
     _x: x,
@@ -36,7 +36,7 @@ async function wearMask() {
     Math.pow(positions[1]._y - positions[8]._y, 2)
   );
   let mask = document.getElementById("mask")
-  ctx.drawImage(mask, x + imageWidth * 0.06, y - height * 0.08, imageWidth, height * 0.8)
+  ctx.drawImage(mask, x + faceWidth * 0.06, y - height * 0.08, faceWidth, height * 0.8)
   loading.style.display = "none";
 
 }
